@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1472682432338600}
+  m_IsPrefabParent: 1
+--- !u!1 &1472682432338600
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4282230730701640}
+  - component: {fileID: 114861509672295390}
+  - component: {fileID: 114596957464880306}
+  - component: {fileID: 114253471679093232}
+  m_Layer: 0
+  m_Name: GridMaker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4282230730701640
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1472682432338600}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.9, y: -4.22, z: 0.13666153}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114253471679093232
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1472682432338600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6617a71a50ad82943845410be9d18352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hexPrefab: {fileID: 4037114611569344, guid: 5a90d7bf060efeb49bd69424c375c312, type: 2}
+  gridWidth: 11
+  gridHeight: 11
+  gap: 0.1
+  rows: []
+  columnCount: 10
+  rowCount: 10
+  coreWidth: 1
+  columnInterval: 1
+  rowInterval: 1
+  spawnTile: {fileID: 4037114611569344, guid: 5a90d7bf060efeb49bd69424c375c312, type: 2}
+  powerSourceTile: {fileID: 4664966520370576, guid: 7e7e6016dfb2a3545ad60489a91587e3,
+    type: 2}
+  resourceTile: {fileID: 4073430540236458, guid: 583de84c872ead545a00300ecf0689b0,
+    type: 2}
+  groundLevelTile: {fileID: 4606595437447022, guid: 5be8c6d1ce0866d4bbfefbf96f4c80d1,
+    type: 2}
+--- !u!114 &114596957464880306
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1472682432338600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20ecd1627f0d84b6991310a644102526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 0}
+  tempPathTiles: []
+  pathTiles: []
+  makingPath: 0
+  defaultFactory: {fileID: 1056270473961042, guid: 3b93195424a73564a95586de54f0ad86,
+    type: 2}
+  adjCheckDistance: 2
+--- !u!114 &114861509672295390
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1472682432338600}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21254ddeb52de44b58ab151e17f9b4eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rows: []
+  columnCount: 20
+  rowCount: 20
+  coreWidth: 1
+  columnInterval: 1
+  rowInterval: 1
+  spawnTile: {fileID: 1205664238603912, guid: 6bc5fd73d7a5d49a0a9eb70cb7cd94f6, type: 2}
+  powerSourceTile: {fileID: 1413415106280400, guid: 5f5d49ba36516424c8f6c67b2cb7c0be,
+    type: 2}
+  resourceTile: {fileID: 1445103474509694, guid: 2ea9496da3b3e094dbdc1ee17f739e18,
+    type: 2}
