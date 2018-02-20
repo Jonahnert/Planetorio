@@ -10,6 +10,7 @@ public class fuelManager : MonoBehaviour {
     public bool pathComplete = false;
 
     public GameObject myOriginFactory;
+    public GameObject testMarker;
 
 	// Use this for initialization
 	void Start () {
@@ -87,10 +88,15 @@ public class fuelManager : MonoBehaviour {
        
         for(int i =0; i< myPastPositions.Count; i++)
         {
-            pathPositions[i] = myPastPositions[i];
+            
+            Vector3 tempVector = new Vector3();
+            tempVector = myPastPositions[i];
+            tempVector.z = 0f;
+            //GameObject marker = Instantiate(testMarker, tempVector, Quaternion.identity);
+            pathPositions[i] = tempVector;
             //Debug.Log(pathPositions[i]);
         }
         
-        myOriginFactory.GetComponent<factoryManager>().DrawPath(pathPositions, 1.0f, gameObject.transform.position);
+        myOriginFactory.GetComponent<factoryManager>().DrawPath(pathPositions, 0.5f, gameObject.transform.position);
     }
 }

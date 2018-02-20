@@ -737,7 +737,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 1.7
+  m_Time: 3.93
   m_Parameters:
     serializedVersion: 2
     widthMultiplier: 1
@@ -8384,3 +8384,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultDeposit: {fileID: 1763614731689406, guid: ff17bf9ad1d25854cafc3efe64bb507c,
     type: 2}
+  fuelAmount: 10
+  myPastPositions: []
+  pathComplete: 0
+  myOriginFactory: {fileID: 0}
+  testMarker: {fileID: 1010482052930746, guid: a75908aa38ce674458ce94d366a135ac, type: 2}

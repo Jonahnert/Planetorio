@@ -17,6 +17,7 @@ public class factoryManager : MonoBehaviour {
     // Use this for initialization
     public Vector3 startPos;
     public Vector3 endPos;
+    public Material pathMat;
     private bool isLaunching = false;
 
     public GameObject newSpawn;
@@ -116,13 +117,22 @@ public class factoryManager : MonoBehaviour {
         Debug.Log("I drew a path");
         //Mesh myPath = extrudeAlongPath(points, width);
         //GameObject myNewPath = new GameObject();
-        GameObject path = Instantiate(new GameObject(), transform.position, Quaternion.identity);
+        //GameObject path = Instantiate(new GameObject(), transform.position, Quaternion.identity);
+        GameObject path = Instantiate(new GameObject(), transform.TransformPoint(transform.position), Quaternion.identity);
         path.AddComponent<MeshRenderer>();
+        path.GetComponent<Renderer>().material = pathMat;   
         path.AddComponent<MeshFilter>();
+
+        for(int i = 0; i < points.Length; i++)
+        {
+            points[i] -= path.transform.position;
+        }
+
+
         path.GetComponent<MeshFilter>().mesh = extrudeAlongPath(points, width);
         path.AddComponent<MeshCollider>();
-        //sets location to halfway between start and end
-        //path.transform.position = (gameObject.transform.position + endPos) / 2;
+
+
 
     }
     public static Mesh extrudeAlongPath(Vector3[] points, float width)

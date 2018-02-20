@@ -286,6 +286,7 @@ MonoBehaviour:
   boxCheck: []
   startPos: {x: 0, y: 0, z: 0}
   endPos: {x: 0, y: 0, z: 0}
+  pathMat: {fileID: 2100000, guid: 1253089ebd9de4b479034dabaa2433c9, type: 2}
   newSpawn: {fileID: 0}
   launchVector: {x: 0, y: 0, z: 0}
   launchFactor: 100
